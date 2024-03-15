@@ -97,12 +97,12 @@ func addToQueue(uri string, queue chan string, outputFile *os.File) {
 
 func display(uri string, found []string, start time.Time, stop time.Time, outputFile *os.File) {
 	mu.Lock()
-	fmt.Println("Start time of crawl of this URL:", start)
-	fmt.Println("Stop time of crawl of this URL:", stop)
+	// fmt.Println("Start time of crawl of this URL:", start)
+	// fmt.Println("Stop time of crawl of this URL:", stop)
 	fmt.Println(uri)
 
-	fmt.Fprintln(outputFile, "Start time of crawl of this URL:", start)
-	fmt.Fprintln(outputFile, "Stop time of crawl of this URL:", stop)
+	// fmt.Fprintln(outputFile, "Start time of crawl of this URL:", start)
+	// fmt.Fprintln(outputFile, "Stop time of crawl of this URL:", stop)
 	fmt.Fprintln(outputFile, uri)
 
 	for _, str := range found {
